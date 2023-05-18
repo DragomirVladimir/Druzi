@@ -1,0 +1,36 @@
+body {
+  background-color: $global-bg;
+  color: $text-color;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.section {
+  height: 100vh;
+  padding: 42px 0;
+}
+
+.title {
+  font-size: 55px;
+}

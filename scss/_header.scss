@@ -1,0 +1,63 @@
+.header {
+  &__logo {
+    flex: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+  padding: 27px 0 18px;
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 52px;
+  }
+
+  &__menu-link {
+    display: block;
+    font-size: 24px;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: $accent-color;
+      position: absolute;
+      left: 0;
+      top: 90%;
+      transition: width 0.3s ease;
+    }
+
+    &:hover,
+    &--active {
+      color: $accent-color;
+    }
+
+    &:hover::after,
+    &--active::after {
+      width: 100%;
+    }
+
+  }
+
+}
+
+.lan-switcher {
+  &__btn {
+    font-style: 24px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover,
+    &--active {
+      color: $accent-color;
+    }
+  }
+}

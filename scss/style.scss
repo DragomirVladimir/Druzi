@@ -1,0 +1,32 @@
+@import 'reset';
+@import 'vars';
+@import 'global';
+@import'header';
+
+.main-screen {
+
+  &__inner {
+    height: calc(100vh - 98px);
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    max-width: 834px;
+    padding: 60px 100px;
+
+  }
+
+  &__logo {
+    max-width: 210px;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 64px;
+  }
+
+  &__dscr-text {
+    font-size: 36px;
+  }
+
+}
