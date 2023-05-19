@@ -1,19 +1,22 @@
 @import 'reset';
 @import 'vars';
+@import 'jquery.fancybox';
+@import 'slick.scss';
 @import 'global';
 @import'header';
 
 .main-screen {
+  height: auto;
+  padding: 0;
 
   &__inner {
-    height: calc(100vh - 98px);
+    height: calc(100vh - 107px);
     display: flex;
     flex-direction: column;
     gap: 60px;
     justify-content: center;
-    max-width: 834px;
+    max-width: 726px;
     padding: 60px 100px;
-
   }
 
   &__logo {
@@ -27,6 +30,226 @@
 
   &__dscr-text {
     font-size: 36px;
+    line-height: 1.5;
+
+    &--check {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__dscr-link {
+    margin-left: auto;
+    padding: 11px 11px 9px 65px;
+    background-color: $accent-color;
+    color: $global-bg;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+
+    &::after {
+      content: '';
+      width: 46px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 11px;
+      background-image: url('../images/icons/icon-letter.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+
+      box-shadow: 0 0 10px 1px $accent-color;
+    }
+  }
+
+}
+
+.about {
+
+  &__title {
+    margin-bottom: 76px;
+  }
+
+  &__content {
+    column-count: 2;
+    column-gap: 46px;
+    padding: 0 63px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-weight: 300;
+    max-width: 554px;
+
+    &--title {
+      display: block;
+    }
+
+    &--accent {
+      color: $accent-color;
+    }
+  }
+}
+
+.services {
+
+  &__title {
+    max-width: 427px;
+    margin-bottom: 112px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 28px;
+    padding: 0 40px;
+  }
+
+  &__card {
+    max-width: 347px;
+    padding: 110px 17px;
+    border: 1px solid #B1B1B1;
+  }
+
+  &__card-title {
+    min-height: 174px;
+    margin-bottom: 33px;
+    font-weight: 880;
+    font-size: 32px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 72%;
+      height: 16px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url('../images/card-decor.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  &__card-link {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 17px;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: $accent-color;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    position: relative;
+
+    &:hover {
+      color: $text-color;
+    }
+
+  }
+
+  &__card-link-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    path {
+      fill: $accent-color;
+      transition: fill 0.3s ease;
+    }
+  }
+
+  &__card-link:hover &__card-link-icon path {
+    fill: $text-color;
+  }
+}
+
+.cases {
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__item {
+    &:nth-child(3) {
+      transform: translateX(-600px);
+    }
+
+    &:nth-child(4) {
+      transform: translateX(-1200px);
+    }
+  }
+
+  &__item:not(:first-child) {
+    .cases__link:hover .cases__link-wrapper {
+      transform: translateX(-78%);
+    }
+  }
+
+  &__link {
+    display: block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__link-wrapper {
+    transition: transform 0.3s ease;
+  }
+
+
+  &__link-bg {
+    display: block;
+    width: 703px;
+    height: 393px;
+    margin-bottom: 35px;
+    background-color: aquamarine;
+    box-shadow: -80px 2px 47px 23px #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      left: 30px;
+      bottom: 35px;
+      background-image: url('../images/icons/icon-play.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__link-dscr {
+    padding: 0 12px;
+    font-weight: 500;
+    font-size: 20px;
   }
 
 }
