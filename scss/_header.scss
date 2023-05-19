@@ -1,7 +1,14 @@
 .header {
+
+
   &__logo {
     flex: none;
   }
+
+}
+
+.header-hidden {
+  display: none;
 }
 
 .nav {

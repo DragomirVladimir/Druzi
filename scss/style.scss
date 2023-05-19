@@ -2,11 +2,12 @@
 @import 'vars';
 @import 'jquery.fancybox';
 @import 'slick.scss';
+@import 'fullpage';
 @import 'global';
 @import'header';
 
 .main-screen {
-  height: auto;
+  height: 100vh;
   padding: 0;
 
   &__inner {
@@ -74,6 +75,8 @@
 }
 
 .about {
+
+  padding-bottom: 16px;
 
   &__title {
     margin-bottom: 76px;
@@ -214,6 +217,10 @@
     }
   }
 
+  &__link:hover &__link-bg::after {
+    transform: scale(1.2);
+  }
+
   &__link-wrapper {
     transition: transform 0.3s ease;
   }
@@ -243,6 +250,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: transform 0.3s ease;
     }
   }
 
