@@ -1,14 +1,19 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: transform 0.3s ease;
 
+  &--hidden {
+    transform: translateY(-100%);
+  }
 
   &__logo {
     flex: none;
   }
 
-}
-
-.header-hidden {
-  display: none;
 }
 
 .nav {

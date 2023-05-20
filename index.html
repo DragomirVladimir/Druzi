@@ -6,10 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Druzi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800;900&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,22 +21,22 @@
           <img src="images/logo-small.svg" alt="logo">
         </a>
 
-        <ul class="nav__menu">
+        <ul class="nav__menu" id="navigation">
 
-          <li class="nav__menu-item">
-            <a class="nav__menu-link" href="#">
+          <li class="nav__menu-item" data-menuanchor="about">
+            <a class="nav__menu-link" href="#about">
               About
             </a>
           </li>
 
-          <li class="nav__menu-item">
-            <a class="nav__menu-link" href="#">
+          <li class="nav__menu-item" data-menuanchor="services">
+            <a class="nav__menu-link" href="#services">
               Services
             </a>
           </li>
 
-          <li class="nav__menu-item">
-            <a class="nav__menu-link" href="#">
+          <li class="nav__menu-item" data-menuanchor="casses">
+            <a class="nav__menu-link" href="#casses">
               Casses
             </a>
           </li>
@@ -85,81 +81,19 @@
 
     <div id="fullpage" class="fullpage">
 
-      <section class="section main-screen">
-
-        <!-- <header class="header">
-
-          <div class="container">
-
-            <nav class="nav">
-
-              <a class="logo header__logo" href="#">
-                <img src="images/logo-small.svg" alt="logo">
-              </a>
-
-              <ul class="nav__menu">
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    About
-                  </a>
-                </li>
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    Services
-                  </a>
-                </li>
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    Casses
-                  </a>
-                </li>
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    News
-                  </a>
-                </li>
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    Careers
-                  </a>
-                </li>
-
-                <li class="nav__menu-item">
-                  <a class="nav__menu-link" href="#">
-                    Contact
-                  </a>
-                </li>
-
-              </ul>
-
-              <div class="lang-switcher">
-                <button class="lang-switcher__btn" type="button">UA</button>
-                <div class="lang-switcher__decor"></div>
-                <button class="lang-switcher__btn lang-switcher__btn--active" type="button">EN</button>
-              </div>
-
-            </nav>
-
-          </div>
-
-        </header> -->
+      <section class="section main-screen" data-anchor="home">
 
         <div class="container">
 
           <div class="main-screen__inner">
 
-            <img class="main-screen__logo" src="images/logo-main.svg" alt="logo">
+            <img class="main-screen__logo element-hide" src="images/logo-main.svg" alt="logo">
 
-            <h2 class="main-screen__title">
+            <h2 class="main-screen__title element-hide">
               A one-stop marketing hub
             </h2>
 
-            <div class="main-screen__dscr">
+            <div class="main-screen__dscr element-hide">
 
               <p class="main-screen__dscr-text">
                 One agency for all marketing tasks of your business.
@@ -180,7 +114,7 @@
 
       </section>
 
-      <section class="section about">
+      <section class="section about" data-anchor="about">
 
         <div class="container">
 
@@ -188,40 +122,43 @@
             About
           </h2>
 
-          <div class="about__content">
+          <div class="about__content-wrapper element-hide">
+            <div class="about__content">
+              <p class="about__text">
+                <span class="about__text--accent">DRUZI marketing hub</span> is the one-stop marketing agency for all
+                marketing tasks.
+              </p>
 
-            <p class="about__text">
-              <span class="about__text--accent">DRUZI marketing hub</span> is the one-stop marketing agency for all
-              marketing tasks.
-            </p>
+              <p class="about__text">
+                This means that DRUZI is the one-stop agency for all your company's marketing needs. We are your
+                complete
+                marketing department.
+              </p>
 
-            <p class="about__text">
-              This means that DRUZI is the one-stop agency for all your company's marketing needs. We are your complete
-              marketing department.
-            </p>
+              <p class="about__text">
+                We work in the hub format: DRUZI and the company's marketing team are a single whole, only we are
+                outsourced. We work under the supervision of the CEO or CMO. We will jointly agree on the company's
+                strategy, tactical
+                decisions, and budgets to achieve your goals.
+              </p>
 
-            <p class="about__text">
-              We work in the hub format: DRUZI and the company's marketing team are a single whole, only we are
-              outsourced. We work under the supervision of the CEO or CMO. We will jointly agree on the company's
-              strategy, tactical
-              decisions, and budgets to achieve your goals.
-            </p>
+              <p class="about__text">
+                <span class="about__text--accent about__text--title">What is DRUZI about?</span> About the efficiency of
+                your business. On the
+                wise use of marketing budgets. About the
+                cooperation of happy people.
+              </p>
 
-            <p class="about__text">
-              <span class="about__text--accent about__text--title">What is DRUZI about?</span> About the efficiency of
-              your business. On the
-              wise use of marketing budgets. About the
-              cooperation of happy people.
-            </p>
+              <p class="about__text">
+                That is why we are the one-stop agency for our customers. This format optimizes the time spent on briefs
+                and
+                related communications. In addition, customers receive updates from all areas of work from one manager
+                at
+                a
+                convenient time. Like a true friend: write to us, and we will resolve all issues together.
+              </p>
 
-            <p class="about__text">
-              That is why we are the one-stop agency for our customers. This format optimizes the time spent on briefs
-              and
-              related communications. In addition, customers receive updates from all areas of work from one manager at
-              a
-              convenient time. Like a true friend: write to us, and we will resolve all issues together.
-            </p>
-
+            </div>
           </div>
 
         </div>
@@ -229,7 +166,7 @@
       </section>
 
 
-      <section class="section services">
+      <section class="section services" data-anchor="services">
 
         <div class="container">
 
@@ -237,155 +174,192 @@
             Our services for your business
           </h2>
 
-          <div class="services__wrapper">
+          <ul class="services__list">
 
-            <ul class="services__list">
+            <li class="services__list-item">
+              <div class="services__card">
 
-              <li class="services__list-item">
-                <article class="services__card">
+                <h3 class="services__card-title">
+                  Marketing challenges
+                </h3>
 
-                  <h3 class="services__card-title">
-                    Marketing challenges
-                  </h3>
+                <a class="services__card-link" href="#">
 
-                  <a class="services__card-link" href="#">
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-                    Reade more
-                    <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
-                        fill="yellow" />
-                    </svg>
+                </a>
 
-                  </a>
+              </div>
+            </li>
 
-                </article>
-              </li>
+            <li class="services__list-item">
+              <div class="services__card">
 
-              <li class="services__list-item">
-                <article class="services__card">
+                <h3 class="services__card-title">
+                  Events and advertising campaigns
+                </h3>
 
-                  <h3 class="services__card-title">
-                    Events and advertising campaigns
-                  </h3>
+                <a class="services__card-link" href="#">
 
-                  <a class="services__card-link" href="#">
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-                    Reade more
-                    <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
-                        fill="yellow" />
-                    </svg>
+                </a>
 
-                  </a>
+              </div>
+            </li>
 
-                </article>
-              </li>
+            <li class="services__list-item">
+              <div class="services__card">
 
-              <li class="services__list-item">
-                <article class="services__card">
+                <h3 class="services__card-title">
+                  Analytics Business & Marketing
+                </h3>
 
-                  <h3 class="services__card-title">
-                    Analytics Business & Marketing
-                  </h3>
+                <a class="services__card-link" href="#">
 
-                  <a class="services__card-link" href="#">
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-                    Reade more
-                    <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
-                        fill="yellow" />
-                    </svg>
+                </a>
 
-                  </a>
+              </div>
+            </li>
 
-                </article>
-              </li>
+            <li class="services__list-item">
+              <div class="services__card">
 
-              <li class="services__list-item">
-                <article class="services__card">
+                <h3 class="services__card-title">
+                  Creative & design
+                </h3>
+                <a class="services__card-link" href="#">
 
-                  <h3 class="services__card-title">
-                    Creative & design
-                  </h3>
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-                  <a class="services__card-link" href="#">
-                    Reade more
-                  </a>
+                </a>
 
-                </article>
-              </li>
+              </div>
+            </li>
 
-              <li class="services__list-item">
-                <article class="services__card">
+            <li class="services__list-item">
+              <div class="services__card">
 
-                  <h3 class="services__card-title">
-                    Marketing challenges
-                  </h3>
+                <h3 class="services__card-title">
+                  Marketing challenges
+                </h3>
 
-                  <a class="services__card-link" href="#">
-                    Reade more
-                  </a>
+                <a class="services__card-link" href="#">
 
-                </article>
-              </li>
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-              <li class="services__list-item">
-                <article class="services__card">
+                </a>
 
-                  <h3 class="services__card-title">
-                    Events and advertising campaigns
-                  </h3>
+              </div>
+            </li>
 
-                  <a class="services__card-link" href="#">
-                    Reade more
-                  </a>
+            <li class="services__list-item">
+              <div class="services__card">
 
-                </article>
-              </li>
+                <h3 class="services__card-title">
+                  Events and advertising campaigns
+                </h3>
 
-              <li class="services__list-item">
-                <article class="services__card">
+                <a class="services__card-link" href="#">
 
-                  <h3 class="services__card-title">
-                    Analytics Business & Marketing
-                  </h3>
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-                  <a class="services__card-link" href="#">
-                    Reade more
-                  </a>
+                </a>
 
-                </article>
-              </li>
+              </div>
+            </li>
 
-              <li class="services__list-item">
-                <article class="services__card">
+            <li class="services__list-item">
 
-                  <h3 class="services__card-title">
-                    Creative & design
-                  </h3>
+              <div class="services__card">
 
-                  <a class="services__card-link" href="#">
-                    Reade more
-                  </a>
+                <h3 class="services__card-title">
+                  Analytics Business & Marketing
+                </h3>
 
-                </article>
-              </li>
+                <a class="services__card-link" href="#">
 
-            </ul>
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
 
-          </div>
+                </a>
+
+              </div>
+
+            </li>
+
+            <li class="services__list-item">
+              <div class="services__card">
+
+                <h3 class="services__card-title">
+                  Creative & design
+                </h3>
+
+                <a class="services__card-link" href="#">
+
+                  Reade more
+                  <svg class="services__card-link-icon" width="11" height="19" viewBox="0 0 12 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.96912 0.469059C1.03879 0.399214 1.12155 0.3438 1.21267 0.30599C1.30379 0.268181 1.40147 0.248718 1.50012 0.248718C1.59877 0.248718 1.69645 0.268181 1.78757 0.30599C1.87869 0.3438 1.96145 0.399214 2.03112 0.469059L11.0311 9.46906C11.101 9.53873 11.1564 9.62149 11.1942 9.71261C11.232 9.80373 11.2515 9.90141 11.2515 10.0001C11.2515 10.0987 11.232 10.1964 11.1942 10.2875C11.1564 10.3786 11.101 10.4614 11.0311 10.5311L2.03112 19.5311C1.89029 19.6719 1.69928 19.751 1.50012 19.751C1.30096 19.751 1.10995 19.6719 0.96912 19.5311C0.82829 19.3902 0.749172 19.1992 0.749172 19.0001C0.749172 18.8009 0.82829 18.6099 0.96912 18.4691L9.43962 10.0001L0.96912 1.53106C0.899275 1.46139 0.84386 1.37863 0.806051 1.28751C0.768241 1.19639 0.748779 1.09871 0.748779 1.00006C0.748779 0.901408 0.768241 0.803726 0.806051 0.712609C0.84386 0.621491 0.899275 0.538728 0.96912 0.469059Z"
+                      fill="yellow" />
+                  </svg>
+
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
 
         </div>
 
       </section>
 
-      <section class="section cases">
+      <section class="section cases" data-anchor="casses">
 
         <div class="container">
 
@@ -456,7 +430,7 @@
   </main>
 
 
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/fullpage.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>

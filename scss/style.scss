@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'vars';
+@import 'fonts';
 @import 'jquery.fancybox';
 @import 'slick.scss';
 @import 'fullpage';
@@ -7,18 +8,18 @@
 @import'header';
 
 .main-screen {
-  height: 100vh;
-  padding: 0;
+  padding: 107px 0 0;
 
   &__inner {
-    height: calc(100vh - 107px);
     display: flex;
     flex-direction: column;
     gap: 60px;
     justify-content: center;
+    height: calc(100vh - 107px);
     max-width: 726px;
     padding: 60px 100px;
   }
+
 
   &__logo {
     max-width: 210px;
@@ -41,6 +42,7 @@
   }
 
   &__dscr-link {
+    min-width: 228px;
     margin-left: auto;
     padding: 11px 11px 9px 65px;
     background-color: $accent-color;
@@ -72,6 +74,15 @@
     }
   }
 
+  .element-hide {
+    transform: perspective(2000px) rotateX(90deg) translateY(-50%);
+    transition: all 1s ease 0.5s;
+  }
+
+  .element-hide.element-show {
+    transform: perspective(2000px) rotateX(0deg) translateY(0);
+  }
+
 }
 
 .about {
@@ -86,6 +97,7 @@
     column-count: 2;
     column-gap: 46px;
     padding: 0 63px;
+    overflow: hidden;
   }
 
   &__text {
@@ -101,31 +113,47 @@
       color: $accent-color;
     }
   }
+
+  .element-hide {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 1s ease-out 0.5s;
+  }
+
+  .element-hide.element-show {
+    grid-template-rows: 1fr;
+  }
 }
 
 .services {
 
   &__title {
     max-width: 427px;
-    margin-bottom: 112px;
+    margin-bottom: 92px;
   }
 
   &__list {
-    display: flex;
-    gap: 28px;
     padding: 0 40px;
   }
 
   &__card {
     max-width: 347px;
-    padding: 110px 17px;
+    min-width: 280px;
+    padding: 110px 33px 110px 17px;
     border: 1px solid #B1B1B1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 8px 0 #ffffff;
+      border-color: transparent;
+    }
   }
 
   &__card-title {
     min-height: 174px;
     margin-bottom: 33px;
-    font-weight: 880;
+    font-weight: 800;
     font-size: 32px;
     text-transform: uppercase;
     position: relative;
@@ -260,4 +288,42 @@
     font-size: 20px;
   }
 
+}
+
+/* slider*/
+
+.slick-track {
+  display: flex;
+  gap: 28px;
+}
+
+.slick-list {
+  padding: 20px 20px;
+}
+
+.slick-arrow {
+  width: 45px;
+  height: 50px;
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slick-arrow.slick-disabled {
+  opacity: 0.4;
+}
+
+.slick-prev {
+  background-image: url('../images/icons/icon-slider-left.svg');
+}
+
+.slick-next {
+  left: auto;
+  right: -16px;
+  background-image: url('../images/icons/icon-slider-right.svg');
 }

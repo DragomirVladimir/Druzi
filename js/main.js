@@ -4,52 +4,43 @@ $(function () {
   $('#fullpage').fullpage({
     credits: { enabled: false },
     licenseKey: 'gplv3-license',
-    navigation: true,
+    menu: '#navigation',
 
     onLeave: function (origin, destination, direction) {
-      console.log(origin.index);
-      console.log("Leaving section" + origin.index);
-      console.log(destination);
 
       if (destination.index !== 0) {
-        $('.header').addClass('header-hidden')
+        $('.header').addClass('header--hidden')
 
       } else {
-        $('.header').removeClass('header-hidden')
+        $('.header').removeClass('header--hidden')
       }
     },
 
   });
 
 
-
   $('.services__list').slick({
 
-    arrows: false,
+    arrows: true,
     infinite: false,
-    slidesToShow: 3,
-    focusOnSelect: true,
+    variableWidth: true,
+
+  });
 
 
-    responsive: [{
-      breakpoint: 1120,
-      settings: {
-        initialSlide: 1,
-        slidesToShow: 2,
-        centerMode: true,
+  function onEntry(entry, observer) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        $(change.target).addClass('element-show');
       }
-    },
+    });
+  }
 
-    {
-      breakpoint: 700,
-      settings: {
-        variableWidth: true,
-        initialSlide: 1,
-        slidesToShow: 1,
-        centerMode: true,
-      }
-    }
-    ]
+  let options = { threshold: [0.3] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = $('.element-hide');
+  elements.each(function () {
+    observer.observe(this);
   });
 
 })
