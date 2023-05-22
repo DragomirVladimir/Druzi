@@ -1,13 +1,3 @@
-/*!
- * fullPage 4.0.19
- * https://github.com/alvarotrigo/fullPage.js
- *
- * @license GPLv3 for open source use only
- * or Fullpage Commercial License for commercial use
- * http://alvarotrigo.com/fullPage/pricing/
- *
- * Copyright (C) 2021 http://alvarotrigo.com/fullPage - A project by Alvaro Trigo
- */
 html.fp-enabled,
 .fp-enabled body {
   margin: 0;
@@ -267,6 +257,7 @@ html.fp-enabled,
   /* Fallback for browsers that do not support Custom Properties */
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
+
 }
 
 /* Disabling vertical centering on scrollable elements */

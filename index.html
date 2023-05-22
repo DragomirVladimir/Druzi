@@ -11,14 +11,14 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="header">
 
     <div class="container">
 
       <nav class="nav">
 
         <a class="logo header__logo" href="#">
-          <img src="images/logo-small.svg" alt="logo">
+          <img src="images/logo-small.png" alt="logo">
         </a>
 
         <ul class="nav__menu" id="navigation">
@@ -67,6 +67,12 @@
           <button class="lang-switcher__btn lang-switcher__btn--active" type="button">EN</button>
         </div>
 
+        <button class="burger-btn" type="button">
+          <span class="burger-btn__line burger-btn__line--top"></span>
+          <span class="burger-btn__line burger-btn__line--bottom"></span>
+          <span class="sr-only">menu</span>
+        </button>
+
       </nav>
 
     </div>
@@ -87,7 +93,7 @@
 
           <div class="main-screen__inner">
 
-            <img class="main-screen__logo element-hide" src="images/logo-main.svg" alt="logo">
+            <img class="main-screen__logo element-hide" src="images/logo-main.png" alt="logo">
 
             <h2 class="main-screen__title element-hide">
               A one-stop marketing hub
@@ -369,53 +375,44 @@
 
           <ul class="cases__list">
 
-            <li class="cases__item">
+            <li class="cases__item cases__item--active">
               <a class="cases__link" data-fancybox href="https://youtu.be/IBcwhaYP6Uk">
-                <div class="cases__link-wrapper">
-                  <div class="cases__link-bg" style="background-image: url('images/cases/case-1.jpg');"></div>
-                  <div class="cases__link-dscr">
-                    2023-2022
-                  </div>
-                </div>
+                <div class="cases__link-bg" style="background-image: url('images/cases/case-1.jpg');"></div>
+                <span class="cases__link-dscr">
+                  2023-2022
+                </span>
+                <span class='sr-only'>Play video</span>
               </a>
             </li>
 
             <li class="cases__item">
               <a class="cases__link" data-fancybox href="https://youtu.be/-qn-6dd--vY">
-                <div class="cases__link-wrapper">
-                  <div class="cases__link-bg cases__link-bg--disable"
-                    style="background-image: url('images/cases/case-2.jpg');">
-                  </div>
-                  <div class="cases__link-dscr">
-                    2021-2020
-                  </div>
-                </div>
+                <div class="cases__link-bg" style="background-image: url('images/cases/case-2.jpg');"></div>
+                <span class="cases__link-dscr">
+                  2021-2020
+                </span>
+                <span class='sr-only'>Play video</span>
               </a>
             </li>
 
             <li class="cases__item">
               <a class="cases__link" data-fancybox href="https://youtu.be/m-ZWXace6hI">
-                <div class="cases__link-wrapper">
-                  <div class="cases__link-bg cases__link-bg--disable"
-                    style="background-image: url('images/cases/case-3.jpg');">
-                  </div>
-                  <div class="cases__link-dscr">
-                    2019-2018
-                  </div>
-                </div>
+                <div class="cases__link-bg" style="background-image: url('images/cases/case-3.jpg');"></div>
+                <span class="cases__link-dscr">
+                  2019-2018
+                </span>
+                <span class='sr-only'>Play video</span>
               </a>
             </li>
 
+
             <li class="cases__item">
               <a class="cases__link" data-fancybox href="https://youtu.be/m91SBnRxlYQ">
-                <div class="cases__link-wrapper">
-                  <div class="cases__link-bg cases__link-bg--disable"
-                    style="background-image: url('images/cases/case-4.jpg');">
-                  </div>
-                  <div class="cases__link-dscr">
-                    2017-2014
-                  </div>
-                </div>
+                <div class="cases__link-bg" style="background-image: url('images/cases/case-4.jpg');"></div>
+                <span class="cases__link-dscr">
+                  2017-2014
+                </span>
+                <span class='sr-only'>Play video</span>
               </a>
             </li>
 

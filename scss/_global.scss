@@ -5,6 +5,18 @@ body {
   font-size: 28px;
   line-height: 1.2;
   font-family: 'Montserrat', sans-serif;
+
+  @media (max-width:1200px) {
+    font-size: 22px;
+  }
+
+  @media (max-width:768px) {
+    font-size: 18px;
+  }
+}
+
+.disable-scroll {
+  overflow: hidden !important;
 }
 
 .sr-only {
@@ -23,14 +35,22 @@ body {
 .container {
   max-width: 1410px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .section {
-  height: 100vh;
   padding: 42px 0;
 }
 
 .title {
   font-size: 55px;
+
+  @media (max-width:1200px) {
+    font-size: 42px;
+  }
+
+
+  @media (max-width:576px) {
+    font-size: 32px;
+  }
 }

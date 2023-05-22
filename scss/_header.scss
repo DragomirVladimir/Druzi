@@ -5,6 +5,8 @@
   width: 100%;
   z-index: 1;
   transition: transform 0.3s ease;
+  position: fixed;
+  background-color: #000000f2;
 
   &--hidden {
     transform: translateY(-100%);
@@ -12,6 +14,11 @@
 
   &__logo {
     flex: none;
+    max-width: 55px;
+
+    @media (max-width:576px) {
+      max-width: 42px;
+    }
   }
 
 }
@@ -20,15 +27,52 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 52px;
+  gap: 30px;
   padding: 27px 0 18px;
+
+  @media (max-width:768px) {
+    padding: 16px 0 16px;
+  }
 
   &__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 52px;
-    flex-wrap: wrap;
+    gap: 48px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 8px;
+      height: 0;
+      width: 100%;
+      position: absolute;
+      top: 107px;
+      left: 0;
+      background-color: #000000f2;
+      z-index: -1;
+      transition: all 0.3s ease;
+      overflow: hidden;
+
+      &--active {
+        height: calc(100vh - 107px);
+        padding: 16px 0;
+        overflow: auto;
+      }
+    }
+
+
+    @media (max-width:576px) {
+      top: 80px;
+    }
+  }
+
+  &__menu-item {
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
   }
 
   &__menu-link {
@@ -60,6 +104,12 @@
       width: 100%;
     }
 
+    @media (max-width: 1024px) {
+      text-align: center;
+      padding: 16px;
+      font-size: 30px;
+    }
+
   }
 
 }
@@ -89,5 +139,13 @@
   &__decor {
     width: 1px;
     background-color: $text-color;
+  }
+
+  @media (max-width: 1024px) {
+    margin-left: auto;
+  }
+
+  @media (max-width:576px) {
+    display: none;
   }
 }
