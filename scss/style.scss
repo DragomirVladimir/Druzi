@@ -51,6 +51,14 @@
   &__title {
     font-weight: 900;
     font-size: 64px;
+    background-image: url('../images/wave-b.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $text-color;
 
     @media (max-width:1200px) {
       font-size: 48px;
@@ -326,6 +334,18 @@
   &__card-link:hover &__card-link-icon path {
     fill: $text-color;
   }
+
+  .slick-track {
+    display: flex;
+    gap: 28px;
+
+    padding: 20px 0;
+
+    @media (max-width: 576px) {
+      gap: 16px;
+    }
+
+  }
 }
 
 
@@ -368,7 +388,8 @@
   }
 
   &__link:hover &__link-bg::after {
-    transform: scale(1.1);
+    left: 60px;
+    bottom: 77px;
   }
 
   &__link-bg {
@@ -396,32 +417,232 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      transition: transform 0.3s ease;
+      transition: left 0.3s ease, bottom 0.3s ease;
     }
   }
 
   &__link-dscr {
+    display: block;
     padding: 0 12px;
     font-weight: 500;
     font-size: 20px;
+
+    span {
+      display: block;
+    }
   }
 
 }
 
+
+.partners {
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2;
+  }
+
+  &__item {
+    border: 1px solid;
+    border-image-slice: 1;
+
+    &:first-child {
+      border-image-source: linear-gradient(320deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 50%);
+    }
+
+    &:last-child {
+      border-image-source: linear-gradient(140deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 50%);
+    }
+
+    &:nth-child(4) {
+      border-image-source: linear-gradient(42deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 50%);
+    }
+
+    &:nth-child(5) {
+      border-image-source: linear-gradient(220deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 50%);
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-image-source: linear-gradient(0deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 100%);
+    }
+
+    &:nth-child(6),
+    &:nth-child(7) {
+      border-image-source: linear-gradient(180deg, #B1B1B1 0%, rgba(177, 177, 177, 0) 100%);
+    }
+
+  }
+
+  &__img {
+    object-fit: contain;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  // .slick-track {
+  //   display: flex;
+
+  // }
+}
+
+
+.contact {
+  padding: 0;
+
+  &__wrapper {
+    overflow: hidden;
+  }
+
+  &__inner {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 35px;
+    gap: 50px;
+
+    @media (max-width: 1023px) {
+      height: auto;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  &__text {
+    max-width: 772px;
+    font-weight: 900;
+    font-size: 45px;
+
+    @media (max-width: 1200px) {
+      font-size: 36px;
+    }
+
+    @media (max-width:576px) {
+      font-size: 18px;
+    }
+
+  }
+
+  &__mail {
+    display: block;
+    margin-bottom: 27px;
+    font-weight: 900;
+    font-size: 45px;
+    color: $accent-color;
+
+    @media (max-width: 1200px) {
+      font-size: 36px;
+    }
+
+    @media (max-width:576px) {
+      font-size: 18px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    max-width: 388px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @media (max-width:576px) {
+      justify-content: center;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 22px;
+  }
+
+  &__social-link {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--telegram {
+      background-image: url('../images/social/icon-telegram.png');
+    }
+
+    &--viber {
+      background-image: url('../images/social/icon-viber.png');
+    }
+
+    &--whatsapp {
+      background-image: url('../images/social/icon-whatsapp.png');
+    }
+
+    &--linkedin {
+      background-image: url('../images/social/icon-linkedin.png');
+    }
+
+    &--facebook {
+      background-image: url('../images/social/icon-facebook.png');
+    }
+
+    &--instagram {
+      background-image: url('../images/social/icon-insta.png');
+    }
+  }
+
+  &__footer {
+    background-color: $accent-color;
+  }
+}
+
+.copyright {
+  flex: none;
+  margin-top: auto;
+  padding: 15px;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: right;
+  color: $global-bg;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    top: 0;
+    left: -100%;
+    background-color: $accent-color;
+    z-index: -1;
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+}
 
 
 
 /* slider*/
-
-.slick-track {
-  display: flex;
-  gap: 28px;
-
-  @media (max-width: 576px) {
-    gap: 16px;
-  }
-
-}
 
 .slick-list {
   padding: 20px;
