@@ -1,3 +1,8 @@
+html,
+body {
+  cursor: url('../images/cursor.svg') 35 35, auto;
+}
+
 body {
   background-color: $global-bg;
   color: $text-color;
@@ -6,6 +11,7 @@ body {
   line-height: 1.2;
   font-family: 'Montserrat', sans-serif;
 
+
   @media (max-width:1200px) {
     font-size: 22px;
   }
@@ -13,6 +19,11 @@ body {
   @media (max-width:768px) {
     font-size: 18px;
   }
+}
+
+a,
+button {
+  cursor: inherit;
 }
 
 .disable-scroll {

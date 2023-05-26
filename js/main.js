@@ -5,7 +5,7 @@ $(function () {
     licenseKey: 'gplv3-license',
     menu: '#navigation',
     verticalCentered: false,
-    responsiveWidth: 1024,
+    responsiveWidth: 1025,
     responsiveHeight: 710,
 
     onLeave: function (origin, destination, direction) {
@@ -20,7 +20,7 @@ $(function () {
 
   });
 
-  if ($(window).width() <= 1025 || $(window).height() <= 769) {
+  if ($(window).width() <= 1024 || $(window).height() <= 710) {
     $('.section, .fp-overflow').css({
       'min-height': 'auto',
       'max-height': 'fit-content',
@@ -51,19 +51,24 @@ $(function () {
     arrows: true,
     infinite: false,
     slidesToShow: 1,
-
-
-
-
-    // responsive: [{
-    //   breakpoint: 576,
-    //   settings: {
-    //     slidesToShow: 1,
-    //     centerMode: true,
-    //   }
-    // }]
-
   });
+
+
+  $('.news__list').slick({
+    arrows: true,
+    infinite: false,
+    slidesToShow: 1,
+    variableWidth: true,
+
+    responsive: [{
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+      }
+    }]
+  });
+
 
 
   function onEntry(entry, observer) {
