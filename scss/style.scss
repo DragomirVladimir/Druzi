@@ -11,13 +11,17 @@
 
 .modal {
   position: fixed;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   z-index: 100;
   background-color: $global-bg;
   overflow: auto;
   transform: rotateX(90deg);
   transition: transform 0.6s ease;
+
+  &.hidden {
+    visibility: hidden;
+  }
 
   &--active {
     transform: rotateX(0);
@@ -29,9 +33,30 @@
     align-items: center;
     gap: 60px;
     min-height: 100vh;
-    max-width: 1120px;
-    padding: 20px;
+    max-width: 1140px;
+    padding: 30px;
     margin: 0 auto;
+    position: relative;
+
+    @media (max-width:768px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 576px) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__close-btn {
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/icons/icon-close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 30px;
+    right: 30px;
   }
 
   &__main-title {
@@ -42,9 +67,14 @@
     line-height: 1.1;
     text-transform: lowercase;
     position: relative;
+
+    @media (max-width:768px) {
+      font-size: 74px;
+    }
   }
 
   &__title-row {
+    display: block;
     position: relative;
 
     &:first-child {
@@ -62,7 +92,7 @@
   }
 
   &__sub-title {
-    max-width: 200px;
+    //max-width: 200px;
     font-size: 24px;
     color: $accent-color;
   }
@@ -87,20 +117,27 @@
   &__label {
     font-size: 24px;
     text-transform: uppercase;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
   }
 
   &__input {
     display: block;
     width: 100%;
-    height: 63px;
     margin-top: 5px;
-    padding: 10px;
+    padding: 16px 10px;
     border: 1px solid #B1B1B1;
     border-radius: 3px;
     background-color: transparent;
     outline: transparent;
     color: inherit;
     transition: box-shadow 0.6s ease, border-color 0.6s ease;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
 
     &--textarea {
       height: 230px;
@@ -137,7 +174,6 @@
     }
   }
 }
-
 
 .main-screen {
   padding: 107px 0 0;
@@ -391,15 +427,7 @@
     @media (max-width: 992px) {
       max-width: 280px;
     }
-
-    // &:hover,
-    // &:focus {
-    //   // transform: scale(1.03);
-    //   // box-shadow: 0 0 8px 0 #ffffff;
-    //   // border-color: transparent;
-    // }
   }
-
 
   &__card-front,
   &__card-back {
@@ -476,11 +504,15 @@
     text-decoration-line: underline;
     color: $accent-color;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: text-shadow 0.3s ease;
     position: relative;
 
+    // &:hover {
+    //   color: $text-color;
+    // }
+
     &:hover {
-      color: $text-color;
+      text-shadow: 0 0 6px $accent-color;
     }
 
   }
@@ -490,15 +522,6 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-
-    path {
-      fill: $accent-color;
-      transition: fill 0.3s ease;
-    }
-  }
-
-  &__card-btn:hover &__card-btn-icon path {
-    fill: $text-color;
   }
 
   .slick-track {
@@ -758,7 +781,6 @@
 
 }
 
-
 .careers {
 
   padding: 0;
@@ -833,11 +855,11 @@
     text-decoration-line: underline;
     color: $accent-color;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: text-shadow 0.3s ease;
     position: relative;
 
     &:hover {
-      color: $text-color;
+      text-shadow: 0 0 6px $accent-color;
     }
 
     @media (max-width:576px) {
@@ -850,15 +872,6 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-
-    path {
-      fill: $accent-color;
-      transition: fill 0.3s ease;
-    }
-  }
-
-  &__item-link:hover &__item-link-icon path {
-    fill: $text-color;
   }
 }
 
@@ -1066,5 +1079,55 @@
 
   @media (max-width: 576px) {
     right: 0;
+  }
+}
+
+
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 726px;
+  }
+
+  &__dscr {
+    margin-left: auto;
+    font-size: 36px;
+
+    @media (max-width: 576px) {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    padding-right: 30px;
+    color: $accent-color;
+    position: relative;
+    transition: text-shadow 0.3s ease;
+
+    &:hover {
+      text-shadow: 0 0 6px $accent-color;
+    }
+  }
+
+  &__link-icon {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
 }
