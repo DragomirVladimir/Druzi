@@ -10,10 +10,17 @@ $(function () {
     onLeave: function (origin, destination, direction) {
 
       if (destination.index !== 0) {
+
         $('.header').addClass('header--hidden');
 
+        $('.nav__menu').addClass('nav__menu--scrl');
+
       } else {
+
         $('.header').removeClass('header--hidden');
+
+        $('.nav__menu').removeClass('nav__menu--scrl');
+
       }
     },
 
@@ -185,4 +192,6 @@ $(function () {
 
 
 })
+
+
 

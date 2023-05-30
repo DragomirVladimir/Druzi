@@ -175,33 +175,29 @@
   }
 }
 
-.main-screen {
-  padding: 107px 0 0;
 
-  @media (max-width:576px) {
-    padding-top: 80px;
-  }
+.main-screen {
 
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 60px;
     justify-content: center;
-    min-height: calc(100vh - 107px);
+    min-height: 100vh;
     max-width: 726px;
-    padding: 60px 100px;
+    padding: 107px 0 40px;
 
-    @media (max-width:992px) {
-      justify-content: space-evenly;
-    }
-
-    @media (max-width:768px) {
-      padding: 0;
+    @media (max-width:1024px) {
+      min-height: auto;
+      padding-top: 130px;
     }
 
     @media (max-width:576px) {
-      min-height: calc(100vh - 80px);
       gap: 30px;
+    }
+
+    @media (max-height:720px) {
+      gap: 20px;
     }
 
   }
@@ -313,22 +309,12 @@
 
 .about {
 
-  padding-bottom: 16px;
-
-  @media (max-width:1200px) {
-    padding-bottom: 40px;
+  &__inner {
+    padding: 40px 0;
   }
 
   &__title {
-    margin-bottom: 76px;
-
-    @media (max-width:1200px) {
-      margin-bottom: 52px;
-    }
-
-    @media (max-width:576px) {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 40px;
   }
 
   &__content {
@@ -345,6 +331,7 @@
     @media (max-width:768px) {
       column-count: 1;
     }
+
   }
 
   &__text {
@@ -352,13 +339,23 @@
     font-weight: 300;
     max-width: 554px;
 
+    @media (max-width:1200px) {
+      font-size: 22px;
+    }
+
     @media (max-width:768px) {
       max-width: 100%;
+      font-size: 18px;
     }
 
     @media (max-width:576px) {
       margin-bottom: 16px;
     }
+
+    @media (max-height:720px) {
+      font-size: 18px;
+    }
+
 
     &--title {
       display: block;
@@ -386,23 +383,30 @@
 
 .services {
 
-  padding-bottom: 20px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 40px 0 0;
+
+    @media (max-width: 1024px) {
+      min-height: auto;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
 
   &__title {
     max-width: 427px;
-    margin-bottom: 92px;
-
-    @media (max-width: 1200px) {
-      margin-bottom: 52px;
-    }
-
-    @media (max-width: 576px) {
-      margin-bottom: 30px;
-    }
-
+    margin-bottom: 40px;
   }
 
   &__list {
+    min-width: 0;
     padding: 0 40px;
 
     @media (max-width: 1200px) {
@@ -444,8 +448,13 @@
     }
 
     @media (max-width: 992px) {
-      padding: 70px 10px;
+      padding: 60px 10px;
     }
+
+    @media (max-height: 720px) {
+      padding: 60px 10px;
+    }
+
   }
 
   &__card-back {
@@ -456,10 +465,16 @@
     height: 100%;
     top: 0;
     left: 0;
+    overflow: hidden; //???
     transform: rotateY(-180deg);
 
     @media (max-width: 992px) {
-      padding: 30px 16px 16px;
+      padding: 20px 16px 16px;
+      font-size: 20px;
+    }
+
+    @media (max-height: 720px) {
+      padding: 20px 16px 16px;
       font-size: 20px;
     }
   }
@@ -507,10 +522,6 @@
     transition: text-shadow 0.3s ease;
     position: relative;
 
-    // &:hover {
-    //   color: $text-color;
-    // }
-
     &:hover {
       text-shadow: 0 0 6px $accent-color;
     }
@@ -550,6 +561,10 @@
 
 .cases {
   overflow: hidden;
+
+  &__inner {
+    padding: 40px 0;
+  }
 
   &__title {
     margin-bottom: 40px;
@@ -610,6 +625,10 @@
       margin-bottom: 16px;
     }
 
+    @media (max-height: 720px) {
+      height: 300px;
+    }
+
     &::after {
       content: '';
       width: 80px;
@@ -640,8 +659,12 @@
 
 .partners {
 
+  &__inner {
+    padding: 40px 0;
+  }
+
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &__list {
@@ -667,6 +690,11 @@
     object-fit: contain;
     margin: 0 auto;
     height: 100%;
+    max-height: 240px;
+
+    @media (max-height: 720px) {
+      max-height: 180px;
+    }
   }
 
   .slick-list {
@@ -678,8 +706,12 @@
 
 .news {
 
+  &__inner {
+    padding: 40px 0 20px;
+  }
+
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   &__list {
@@ -697,7 +729,6 @@
   &__item {
     max-width: 480px;
   }
-
 
   &__card {
     display: flex;
@@ -718,6 +749,10 @@
       height: 200px;
       margin-bottom: 20px
     }
+
+    @media (max-height: 720px) {
+      height: 200px;
+    }
   }
 
   &__card-img {
@@ -728,6 +763,10 @@
     margin-bottom: 38px;
 
     @media (max-width: 576px) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-height: 720px) {
       margin-bottom: 24px;
     }
   }
@@ -745,6 +784,11 @@
       font-size: 22px;
     }
 
+    @media (max-height: 720px) {
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
     a {
       transition: color 0.3s ease;
 
@@ -755,7 +799,7 @@
   }
 
   &__card-text {
-    height: 4.1em;
+    height: 3.7em;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -765,6 +809,10 @@
     @media (max-width: 576px) {
       margin-bottom: 20px;
       font-size: 18px;
+    }
+
+    @media (max-height: 720px) {
+      margin-bottom: 20px;
     }
   }
 
@@ -783,20 +831,17 @@
 
 .careers {
 
-  padding: 0;
-
   &__inner {
     height: 100vh;
-    padding: 42px 0;
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    @media (max-width:1023px) {
+    @media (max-width:1024px) {
       height: auto;
     }
   }
-
 
   &__title {
     margin-bottom: 40px;
@@ -821,6 +866,10 @@
     justify-content: space-between;
     gap: 56px;
 
+    &:nth-child(1n+4) {
+      display: none;
+    }
+
     @media (max-width:1023px) {
       flex-direction: column;
       gap: 18px;
@@ -839,6 +888,11 @@
 
   &__item-dscr {
     max-width: 726px;
+    height: 4.8em;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
     font-size: 24px;
 
     @media (max-width:576px) {
@@ -876,22 +930,20 @@
 }
 
 .contact {
-  padding: 0;
 
   &__wrapper {
     overflow: hidden;
   }
 
   &__inner {
-
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 35px;
-    gap: 50px;
+    gap: 20px;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       height: auto;
       gap: 35px;
     }
@@ -904,7 +956,7 @@
     justify-content: center;
     gap: 60px;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1024px) {
       gap: 35px;
     }
   }

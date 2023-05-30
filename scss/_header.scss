@@ -15,9 +15,9 @@
   &__logo {
     flex: none;
     max-width: 55px;
+    margin-right: auto;
     z-index: 1;
   }
-
 
 
 }
@@ -50,6 +50,10 @@
     &--active {
       width: 300px;
       padding-left: 40px;
+    }
+
+    &--scrl {
+      justify-content: flex-start;
     }
   }
 
@@ -137,6 +141,7 @@
         padding: 107px 40px 40px;
         overflow-y: auto;
       }
+
     }
 
     &__menu-item {
