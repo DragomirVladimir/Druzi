@@ -42,6 +42,7 @@ $(function () {
     arrows: true,
     infinite: false,
     variableWidth: true,
+    //centerMode: true,
 
     responsive: [{
 
