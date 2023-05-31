@@ -35,9 +35,14 @@ button {
 }
 
 .container {
-  max-width: 1410px;
+  //max-width: 1410px;
   margin: 0 auto;
-  padding: 0 20px;
+  //padding: 0 20px;
+  padding: 0 46px;
+
+  @media (max-width:765px) {
+    padding: 0 20px;
+  }
 }
 
 // .section {

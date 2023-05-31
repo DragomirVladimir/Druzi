@@ -26,13 +26,14 @@ $(function () {
 
   });
 
+
+
   if ($(window).width() <= 1024) {
     $('.section, .fp-overflow').css({
       'min-height': 'auto',
       'max-height': 'fit-content',
     });
   };
-
 
 
 
@@ -43,11 +44,12 @@ $(function () {
     variableWidth: true,
 
     responsive: [{
+
       breakpoint: 576,
       settings: {
-        slidesToShow: 1,
         centerMode: true,
       }
+
     }]
 
   });
@@ -55,10 +57,60 @@ $(function () {
 
 
 
-  $('.partners__box').slick({
+  // $('.partners__box').slick({
+  //   arrows: true,
+  //   infinite: false,
+  //   slidesToShow: 1,
+  // });
+
+
+  $('.partners__list').slick({
     arrows: true,
     infinite: false,
-    slidesToShow: 1,
+    //variableWidth: true,
+    slidesToShow: 8,
+    rows: 2,
+
+    responsive: [
+
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 7,
+        }
+      },
+
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 6,
+        }
+      },
+
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+
+      }
+
+    ]
+
   });
 
 
@@ -148,6 +200,12 @@ $(function () {
     $('.services__card').removeClass('services__card--active');
 
     $(this).closest('.services__card').addClass('services__card--active');
+
+  })
+
+  $('.services__card-back').on('click', function () {
+
+    $('.services__card').removeClass('services__card--active');
 
   })
 
