@@ -56,19 +56,10 @@ $(function () {
 
 
 
-
-  // $('.partners__box').slick({
-  //   arrows: true,
-  //   infinite: false,
-  //   slidesToShow: 1,
-  // });
-
-
   $('.partners__list').slick({
     arrows: true,
     infinite: false,
-    //variableWidth: true,
-    slidesToShow: 8,
+    slidesToShow: 7,
     rows: 2,
 
     responsive: [
@@ -76,28 +67,21 @@ $(function () {
       {
         breakpoint: 1920,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 5,
         }
       },
 
       {
         breakpoint: 1366,
         settings: {
-          slidesToShow: 6,
-        }
-      },
-
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 5,
+          slidesToShow: 4,
         }
       },
 
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         }
       },
 
