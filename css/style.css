@@ -2917,6 +2917,18 @@ button {
   margin-right: auto;
   font-weight: 900;
   font-size: 36px;
+  min-width: 300px;
+  max-width: 300px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+@media (max-width: 1023px) {
+  .careers__item-title {
+    max-width: auto;
+  }
 }
 @media (max-width: 576px) {
   .careers__item-title {
@@ -2924,7 +2936,6 @@ button {
   }
 }
 .careers__item-dscr {
-  max-width: 726px;
   height: 4.8em;
   overflow: hidden;
   display: -webkit-box;

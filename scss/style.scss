@@ -998,6 +998,15 @@
     margin-right: auto;
     font-weight: 900;
     font-size: 36px;
+    min-width: 300px;
+    max-width: 300px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+
+    @media (max-width:1023px) {
+      max-width: auto;
+    }
 
     @media (max-width:576px) {
       font-size: 28px;
@@ -1005,7 +1014,6 @@
   }
 
   &__item-dscr {
-    max-width: 726px;
     height: 4.8em;
     overflow: hidden;
     display: -webkit-box;
