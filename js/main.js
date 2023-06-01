@@ -53,6 +53,7 @@ $(function () {
 
     }]
 
+
   });
 
 
@@ -61,6 +62,7 @@ $(function () {
     arrows: true,
     infinite: false,
     slidesToShow: 7,
+    slidesToScroll: 4,
     rows: 2,
 
     responsive: [
@@ -69,6 +71,7 @@ $(function () {
         breakpoint: 1920,
         settings: {
           slidesToShow: 5,
+          slidesToShow: 5,
         }
       },
 
@@ -76,6 +79,7 @@ $(function () {
         breakpoint: 1366,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 4,
         }
       },
 
@@ -83,6 +87,7 @@ $(function () {
         breakpoint: 992,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 3,
         }
       },
 
@@ -90,6 +95,7 @@ $(function () {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
         }
 
       }
