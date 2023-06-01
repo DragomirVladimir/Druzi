@@ -1701,6 +1701,9 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.nav .lang-switcher {
+  margin-left: 0;
+}
 
 .header--hidden .nav__menu {
   top: 214px;
@@ -1794,13 +1797,12 @@ button {
   width: 1px;
   background-color: #ffffff;
 }
-.lang-switcher--mobile {
+
+.nav__menu .lang-switcher {
   margin-left: 0;
 }
-@media (max-width: 1024px) {
-  .lang-switcher--desktop {
-    display: none;
-  }
+.nav__menu .lang-switcher__btn {
+  font-size: 40px;
 }
 
 .burger-btn {

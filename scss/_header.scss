@@ -116,6 +116,14 @@
     background-clip: text;
   }
 
+  .lang-switcher {
+    margin-left: 0;
+
+    // &__btn {
+    //   font-size: 40px;
+    // }
+  }
+
 }
 
 
@@ -216,14 +224,12 @@
     background-color: $text-color;
   }
 
-  &--mobile {
-    margin-left: 0;
-  }
+}
 
-  &--desktop {
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
+.nav__menu .lang-switcher {
+  margin-left: 0;
 
+  &__btn {
+    font-size: 40px;
+  }
 }

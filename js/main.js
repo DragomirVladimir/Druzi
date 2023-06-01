@@ -33,6 +33,9 @@ $(function () {
       'min-height': 'auto',
       'max-height': 'fit-content',
     });
+
+
+    $('.lang-switcher').appendTo('.nav__menu');
   };
 
 
